@@ -17,7 +17,9 @@ def list_departments():
 
 
 def find_department_by_name():
-    pass
+    name = input("Enter department's name: ")
+    department = Department.find_by_name(name)
+    print(department) if department else print(f"Department {name} not found")
 
 
 def find_department_by_id():
