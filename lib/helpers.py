@@ -6,11 +6,14 @@ def exit_program():
     print("Goodbye!")
     exit()
 
+
 # We'll implement the department functions in this lesson
 
 
 def list_departments():
-    pass
+    departments = Department.get_all()
+    for department in departments:
+        print(department)
 
 
 def find_department_by_name():
@@ -34,6 +37,7 @@ def delete_department():
 
 
 # You'll implement the employee functions in the lab
+
 
 def list_employees():
     pass
