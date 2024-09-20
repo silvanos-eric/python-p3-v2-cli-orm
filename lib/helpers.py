@@ -23,7 +23,10 @@ def find_department_by_name():
 
 
 def find_department_by_id():
-    pass
+    # Use a trailing underscore not to override the built-in id function
+    id_ = input("Enter the department's id: ")
+    department = Department.find_by_id(id_)
+    print(department) if department else print(f"Department {id_} not found")
 
 
 def create_department():
